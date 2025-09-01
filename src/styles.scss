@@ -1,0 +1,574 @@
+$orange-color: #ff5722;
+
+.text-orange {
+  color: $orange-color !important;
+}
+
+// Register button (always orange)
+.btn.btn-orange {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  min-width: 120px;
+  text-align: center;
+
+  background-color: $orange-color;
+  border: 1px solid $orange-color;
+  color: #fff;
+
+  &:hover {
+    background-color: darken($orange-color, 8%);
+    border-color: darken($orange-color, 8%);
+    color: #fff;
+  }
+}
+
+.navbar {
+  .nav-link {
+    color: #000;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &.active,
+    &.text-orange {
+      color: $orange-color !important;
+    }
+
+    &:hover {
+      color: $orange-color !important;
+    }
+  }
+
+  // Download app button
+  .btn.btn-outline-secondary {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    min-width: 120px;
+    text-align: center;
+
+    border-color: #e0e0e0;
+    background-color: transparent;
+    color: #000;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $orange-color;
+      border-color: $orange-color;
+      color: #fff;
+    }
+  }
+
+  .no-border {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+}
+
+/* Tablet: Hide main nav links, show cart + buttons + hamburger */
+@media (max-width: 991.98px) {
+  .nav-links {
+    display: none !important;
+  }
+  .tablet-only {
+    display: inline-block !important;
+  }
+}
+
+/* Mobile: Hide buttons too, keep only cart + hamburger */
+@media (max-width: 767.98px) {
+  .tablet-only {
+    display: none !important;
+  }
+}
+
+// Hero styling starts here
+.hero {
+  .section-label {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .hero-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    color: #666;
+    max-width: 500px;
+  }
+
+  .hero-image {
+    position: relative;
+    text-align: center;
+
+    .main-rider {
+      border-radius: 20px;
+      max-width: 100%;
+      transform-origin: center;
+    }
+
+    .floating-card {
+      position: absolute;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: scale(0.9);
+
+      &.card-burger {
+        top: 20%;
+        left: -10%;
+        width: 180px;
+      }
+
+      &.card-delivery {
+        bottom: 10%;
+        right: -5%;
+        width: 160px;
+      }
+    }
+  }
+}
+
+// ==========================
+// About Section Styles
+// ==========================
+.about-section {
+  .about-heading {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .about-title {
+    font-size: 65px;
+    color: #000;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .about-text {
+    font-size: 16px;
+    color: gray;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .main-img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .float-img {
+    position: absolute;
+    width: 90px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+
+    &.float-left {
+      top: 25%;
+      left: -30px;
+    }
+
+    &.float-right {
+      top: 25%;
+      right: -30px;
+    }
+  }
+}
+
+// ==========================
+// Analytics Section Styles
+// ==========================
+.analytics {
+  h2 {
+    font-size: clamp(32px, 6vw, 64px);
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.25rem;
+
+    span {
+      color: $orange-color;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin: 0;
+  }
+
+  // Tablet adjustments
+  @media (max-width: 768px) {
+    h2 {
+      font-size: clamp(28px, 5vw, 48px);
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  // Mobile adjustments
+  @media (max-width: 576px) {
+    h2 {
+      font-size: clamp(24px, 4.5vw, 42px);
+    }
+    p {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+// About us styling starts here
+.us-section {
+  //   .us-heading {
+  //     color: $orange-color !important;
+  //   }
+
+  .us-media {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .us-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// journey styling
+.journey-section {
+  .journey-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+
+  .journey-text {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+  }
+
+  .journey-cards {
+    height: 500px;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 6px;
+    }
+
+    .journey-card {
+      scroll-snap-align: start;
+      min-height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      .year {
+        display: block;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      h5 {
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: #000;
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #6c757d;
+      }
+    }
+  }
+
+  // On tablet & mobile, disable scroll (stack instead)
+  @media (max-width: 991px) {
+    .journey-cards {
+      height: auto;
+      overflow-y: visible;
+
+      .journey-card {
+        min-height: auto;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+// our partners styling
+.partners {
+  .partner-card {
+    padding: 2rem 1rem;
+    transition: transform 0.3s ease;
+
+    h5 {
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .partners-title {
+      font-size: 1.75rem;
+    }
+
+    .partners-text {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// Variables
+$orange: #ff5722;
+$card-radius: 20px;
+
+.press-news {
+  background: #fff;
+
+  .section-heading {
+    color: $orange;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: clamp(24px, 4vw, 36px);
+    color: #000;
+  }
+
+  .press-card {
+    background: #fff;
+    border-radius: $card-radius;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    h5 {
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    .read-more {
+      text-decoration: none;
+      color: $orange;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .date {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+  }
+}
+
+
+// ======================
+// Footer Styles
+// ======================
+
+.footer {
+  background: #fff;
+  color: #333;
+  font-size: 0.95rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: $orange-color; // your brand orange
+    }
+  }
+
+  // --- Top band ---
+  .footer-top {
+    .btn-orange {
+      background-color: $orange-color;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+
+      &:hover {
+        background-color: darken($orange-color, 8%);
+        color: #fff;
+      }
+    }
+
+    .btn-outline-dark {
+      border: 1px solid #ddd;
+      font-weight: 600;
+
+      &:hover {
+        background-color: $orange-color;
+        border-color: $orange-color;
+        color: #fff;
+      }
+    }
+
+    img {
+      display: inline-block;
+    }
+  }
+
+  // --- Middle band ---
+  .footer-middle {
+    h6 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      .text-orange {
+        color: $orange-color;
+      }
+    }
+
+    .footer-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: #f7f7f7;
+      padding: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  // --- Bottom band ---
+  .footer-bottom {
+    border-top: none;
+    color: #6c757d;
+
+    a {
+      color: $orange-color;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // --- Responsive behavior ---
+  @media (max-width: 991.98px) {
+    .footer-top {
+      text-align: center;
+
+      .col-lg-7,
+      .col-lg-5 {
+        text-align: center !important;
+      }
+
+      .d-flex {
+        justify-content: center;
+      }
+    }
+
+    .footer-middle {
+      text-align: center;
+
+      h6 {
+        margin-top: 1rem;
+      }
+
+      .d-flex {
+        justify-content: center;
+      }
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem;
+    }
+  }
+
+
+
+  /* --- RESPONSIVENESS --- */
+  @media (max-width: 991px) {
+    .row {
+      text-align: center;
+    }
+
+    .col-lg-4 {
+      margin-bottom: 2rem;
+    }
+
+    .d-flex.gap-2 {
+      justify-content: center;
+    }
+
+    ul {
+      li {
+        text-align: center;
+      }
+    }
+
+    .d-flex.flex-wrap.gap-3 {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+  }
+}
