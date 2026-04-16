@@ -173,6 +173,7 @@ $orange-color: #ff5722;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       opacity: 0;
       transform: scale(0.9);
+      max-width: 90%;
 
       &.card-burger {
         top: 20%;
@@ -199,6 +200,32 @@ $orange-color: #ff5722;
     }
     .hero-heading {
       text-align: center;
+    }
+  }
+
+  // Mobile: avoid off-canvas overlays; stack cards below image
+  @media (max-width: 767.98px) {
+    .hero-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero-image .floating-card {
+      position: static;
+      transform: none;
+      width: min(360px, 92%);
+      padding: 0;
+      overflow: hidden;
+      opacity: 1; // keep visible even if animations don't run
+    }
+
+    .hero-image .floating-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: inherit;
     }
   }
 }
